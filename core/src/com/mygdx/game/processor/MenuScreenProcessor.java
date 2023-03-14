@@ -1,13 +1,15 @@
 package com.mygdx.game.processor;
 
+import com.badlogic.gdx.Input;
 import com.badlogic.gdx.InputProcessor;
+import com.mygdx.game.screen.PlayScreen;
 
 
 public class MenuScreenProcessor implements InputProcessor {
 
-
     public boolean keyDown (int keycode) {
-        return false;
+        if (keycode == Input.Keys.S) new PlayScreen();
+        return true;
     }
 
     public boolean keyUp (int keycode) {
